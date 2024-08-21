@@ -1,0 +1,128 @@
+%iffalse
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+%\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{float}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+
+% Marks the beginning of the document
+\begin{document}
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{assignment2:1.5.4}
+\author{AI24BTECH11007 - Sri Sathwik Desaboina}
+\maketitle
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\textbf{Question}:\\
+A circle has its center at $\myvec{4\\4}$. If one end of a is $\myvec{4\\0}$, then find the coordinates of the other end.
+\\
+\textbf{Solution: }
+To find the other end of the diameter, we use the fact that the center of the circle is the midpoint of the diameter.
+
+Let \((x_1, y_1)\) be the coordinates of the other end of the diameter. Given that the center of the circle is \((4, 4)\) and one end of the diameter is \((4, 0)\), we have:
+
+\[
+	Midpoint = \myvec{\frac{x_1+4}{2}\\\frac{y_1+0}{2}}
+\]
+
+Since the midpoint is also the center of the circle, we can set this equal to \((4, 4)\):
+
+\[
+	\myvec{\frac{x_1 + 4}{2}\\\frac{y_1 + 0}{2}} = \myvec{4\\4}
+\]
+
+This gives us two equations:
+
+\[
+\frac{x_1 + 4}{2} = 4
+\]
+
+\[
+\frac{y_1 + 0}{2} = 4
+\]
+
+Solving these equations:
+
+1. For \(x_1\):
+
+\[
+\frac{x_1 + 4}{2} = 4
+\]
+
+Multiply both sides by 2:
+
+\[
+x_1 + 4 = 8
+\]
+
+Subtract 4 from both sides:
+
+\[
+x_1 = 4
+\]
+
+2. For \(y_1\):
+
+\[
+\frac{y_1 + 0}{2} = 4
+\]
+
+Multiply both sides by 2:
+
+\[
+y_1 = 8
+\]
+
+Thus, the coordinates of the other end of the diameter are \myvec{4\\8}.
+
+
+
+
+\end{document}
+
+
