@@ -31,6 +31,7 @@
 \usepackage{tabularx}
 \usepackage{array}
 \usepackage{float}
+\usepackage{pgfplots}
 
 
 \newtheorem{theorem}{Theorem}[section]
@@ -64,13 +65,13 @@ A circle has its center at $\myvec{4\\4}$. If one end of a is $\myvec{4\\0}$, th
 \textbf{Solution: }
 To find the other end of the diameter, we use the fact that the center of the circle is the midpoint of the diameter.
 
-Let \((x_1, y_1)\) be the coordinates of the other end of the diameter. Given that the center of the circle is \((4, 4)\) and one end of the diameter is \((4, 0)\), we have:
+Let $\myvec{x_1\\y_1}$ be the coordinates of the other end of the diameter. Given that the center of the circle is $\myvec{4\\4}$ and one end of the diameter is $\myvec{4\\0}$, we have:
 
 \[
 	Midpoint = \myvec{\frac{x_1+4}{2}\\\frac{y_1+0}{2}}
 \]
 
-Since the midpoint is also the center of the circle, we can set this equal to \((4, 4)\):
+Since the midpoint is also the center of the circle, we can set this equal to $\myvec{4\\4}$:
 
 \[
 	\myvec{\frac{x_1 + 4}{2}\\\frac{y_1 + 0}{2}} = \myvec{4\\4}
@@ -121,8 +122,24 @@ y_1 = 8
 Thus, the coordinates of the other end of the diameter are \myvec{4\\8}.
 
 
+\section{Plot}
+Here is the plot:
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{circle_plot.png}
+	\caption{Circle with center $\myvec{4\\4}$ and diameter points A$\myvec{4\\0}$ and B$\myvec{4\\8}$.}
+    \label{fig:circle_plot}
+\end{figure}
 
 
 \end{document}
+
+
+
+
+
+
+
 
 
