@@ -12,7 +12,7 @@ void calculate_midpoint(float ax, float ay, float bx, float by) {
     }
 
     // Write the result to the file
-    fprintf(file, "The midpoint M of A(%.1f, %.1f) and B(%.1f, %.1f) is M(%.1f, %.1f).\n", 
+    fprintf(file, "The midpoint O of A(%.1f, %.1f) and B(%.1f, %.1f) is O(%.1f, %.1f).\n", 
             ax, ay, bx, by, midX, midY);
     
     // Close the file
