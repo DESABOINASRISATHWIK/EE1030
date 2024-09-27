@@ -19,9 +19,10 @@ void plot_points() {
     fprintf(gp, "set title 'Plot of Points O, A, B and Circle'\n");
     fprintf(gp, "set xlabel 'X-axis'\n");
     fprintf(gp, "set ylabel 'Y-axis'\n");
-    fprintf(gp, "set xrange [0:10]\n");
-    fprintf(gp, "set yrange [-1:10]\n");
+    fprintf(gp, "set xrange [0:8]\n"); // Set x range for 8x8 grid
+    fprintf(gp, "set yrange [0:8]\n"); // Set y range for 8x8 grid
     fprintf(gp, "set size ratio 1\n"); // Equal scaling for x and y
+    fprintf(gp, "set grid\n"); // Add grid lines
 
     // Set output to a PNG file
     fprintf(gp, "set terminal pngcairo\n");
