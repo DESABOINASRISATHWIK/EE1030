@@ -1,27 +1,34 @@
+import numpy as np
 import matplotlib.pyplot as plt
 
 # Read the points from the .dat file
 def read_points(filename):
-    points = []
-    with open(filename, 'r') as file:
-        for line in file:
-            if line.startswith('O:') or line.startswith('A:') or line.startswith('B:'):
-                continue  # Skip header lines
-            x, y = map(float, line.strip().split(','))
-            points.append((x, y))
-    return points
+    try:
+        # Load data, skipping header lines that start with 'O:', 'A:', or 'B:'
+        points = np.loadtxt(filename, delimiter=',', skiprows=3)  # Adjust skiprows based on the number of header lines
+        return points
+    except FileNotFoundError:
+        print(f"Error: The file {filename} was not found.")
+        return []
+    except ValueError:
+        print("Error: Invalid format in the file.")
+        return []
 
 # Main function to plot the circle and points
 def plot_circle_with_points(filename):
     # Read points from the file
     points = read_points(filename)
 
-    # Extract circle points
-    circle_x = [point[0] for point in points]
-    circle_y = [point[1] for point in points]
+    if points.size == 0:
+        print("No points to plot.")
+        return
 
-    # Create a smaller figure
-    plt.figure(figsize=(6, 6))  # Adjusted figure size (width, height)
+    # Extract circle points
+    circle_x = points[:, 0]
+    circle_y = points[:, 1]
+
+    # Create a smaller figure (adjusted dimensions)
+    plt.figure(figsize=(3,3))  # Adjusted figure size (width, height)
 
     # Plot the circle points
     plt.plot(circle_x, circle_y, label='Circle Points', color='blue')
@@ -41,12 +48,13 @@ def plot_circle_with_points(filename):
     plt.axis('equal')  # Equal scaling
     plt.legend()
 
-    # Save the plot as a PNG file
-    plt.savefig('circle_plot.png', format='png', bbox_inches='tight')  # Use bbox_inches to minimize whitespace
+    # Save the plot as a PNG file with reduced dimensions
+    plt.savefig('circle_plot.png', format='png', bbox_inches='tight')  # Adjust as needed for minimal whitespace
 
     # Show the plot
     plt.show()
 
 # Call the function with the path to your .dat file
 plot_circle_with_points('points.dat')
+
 
