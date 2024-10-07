@@ -8,22 +8,21 @@ data = np.loadtxt("points.dat", delimiter=",", skiprows=1)  # Skip the header li
 center_x = data[0, 0]  # Should be 0
 center_y = data[0, 1]  # Should be 0
 
-# Set the value of a
-a = 1  # You can change this to any real number you like
-
-# Generate t values from -1 to 1
-t = np.linspace(-1, 1, 100)  # 100 points between -1 and 1
-
-# Calculate x and y coordinates based on the equations
-x = (2 * a * t) / (1 + t**2)
-y = (a * (1 - t**2)) / (1 + t**2)
+# Separate the circle points and transformed points
+circle_points = data[1:101]  # Assuming first 100 points are from the circle
+transformed_points = data[101:]  # Remaining points are transformed points
 
 # Create a plot
-plt.figure(figsize=(8, 6))
-plt.plot(x, y, label='Points on the Circle', color='blue', marker='o', markersize=3)
+plt.figure(figsize=(10, 8))
+
+# Plot the circle points
+plt.scatter(circle_points[:, 0], circle_points[:, 1], label='Circle Points', color='blue', s=10)
+
+# Plot the transformed points
+plt.scatter(transformed_points[:, 0], transformed_points[:, 1], label='Transformed Points', color='red', s=10)
 
 # Set the plot title and labels
-plt.title('Points on the Circle Centered at O(0, 0)')
+plt.title('Circle and Transformed Points')
 plt.xlabel('x')
 plt.ylabel('y')
 plt.axhline(0, color='black', linewidth=0.5, ls='--')
