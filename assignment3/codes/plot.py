@@ -12,8 +12,8 @@ center_y = data[0, 1]  # Should be 0
 circle_points = data[1:101]  # Assuming first 100 points are from the circle
 transformed_points = data[101:]  # Remaining points are transformed points
 
-# Create a plot
-plt.figure(figsize=(10, 8))
+# Create a plot with minimized dimensions
+plt.figure(figsize=(5, 4))  # Changed dimensions to 5x4 inches
 
 # Plot the circle points
 plt.scatter(circle_points[:, 0], circle_points[:, 1], label='Circle Points', color='blue', s=10)
