@@ -16,10 +16,10 @@ transformed_points = data[101:]  # Remaining points are transformed points
 plt.figure(figsize=(5, 4))  # Changed dimensions to 5x4 inches
 
 # Plot the circle points
-plt.scatter(circle_points[:, 0], circle_points[:, 1], label='Circle Points', color='blue', s=10)
+plt.plot(circle_points[:, 0], circle_points[:, 1], label='Circle Points', color='blue', linestyle='-', marker='o', markersize=4)
 
 # Plot the transformed points
-plt.scatter(transformed_points[:, 0], transformed_points[:, 1], label='Transformed Points', color='red', s=10)
+plt.plot(transformed_points[:, 0], transformed_points[:, 1], label='Transformed Points', color='red', linestyle='-', marker='o', markersize=4)
 
 # Set the plot title and labels
 plt.title('Circle and Transformed Points')

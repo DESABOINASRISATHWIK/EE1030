@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.8.7)  8 OCT 2024 15:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.8.7)  9 OCT 2024 10:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1377,15 +1377,11 @@ LaTeX Font Info:    Trying to load font information for TS1+txr on input line 6
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
 ) (./tables/table.tex)
-<figs/plot.png, id=7, 722.7pt x 578.16pt>
+<figs/plot.png, id=7, 361.35pt x 289.08pt>
 File: figs/plot.png Graphic file (type png)
 <use figs/plot.png>
 Package pdftex.def Info: figs/plot.png  used on input line 89.
-(pdftex.def)             Requested size: 578.16078pt x 462.52863pt.
-
-Overfull \hbox (62.16078pt too wide) in paragraph at lines 89--90
- [][] 
- []
+(pdftex.def)             Requested size: 289.0804pt x 231.2643pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1427,7 +1423,7 @@ ublic/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfont
 s/txsya.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (2 pages, 185534 bytes).
+Output written on main.pdf (2 pages, 141329 bytes).
 PDF statistics:
  71 PDF objects out of 1000 (max. 8388607)
  46 compressed objects within 1 object stream
