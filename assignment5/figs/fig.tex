@@ -1,8 +1,4 @@
-\documentclass{standalone}
-\usepackage{tikz}
-\usetikzlibrary{arrows.meta}
-
-\begin{document}
+\begin{center}
 \begin{tikzpicture}
     % Beam horizontal section
     \draw[thick] (0,0) -- (10,0); % 1000 mm long beam
@@ -12,7 +8,7 @@
     \draw[thick] (5,-1) -- (6,-1); % Horizontal part 100 mm
     
     % Force vector
-    \draw[thick, ->] (5.5,-1) -- (5.5,-2) node[midway,right] {100 N}; % Downward force arrow
+    \draw[thick, ->] (5.5,-1) -- (5.5,-2) node[midway,right, yshift=-0.1cm] {100 N}; % Downward force arrow
     
     % Supports
     \filldraw (0,0) -- (-0.2,-0.4) -- (0.2,-0.4) -- cycle; % Left triangle support
@@ -21,7 +17,7 @@
     
     % Dimension lines
     % Full length
-    \draw[<->] (0,-2) -- (10,-2) node[midway, below] {1000 mm}; 
+    \draw[<->] (0,-2) -- (10,-2) node[midway, below, xshift=-0.5cm] {1000 mm}; 
     
     % Left section length
     \draw[<->] (0,0.5) -- (5,0.5) node[midway, above] {500 mm}; 
@@ -33,7 +29,6 @@
     \draw[<->] (5,-2.5) -- (6,-2.5) node[midway, below] {100 mm};
     
     % Vertical drop
-    \draw[<->] (6,-1) -- (6,-3) node[midway, right] {100 mm};
+    \draw[<->] (6,-1) -- (6,-3) node[midway, right, yshift=-0.3cm] {100 mm};
 \end{tikzpicture}
-\end{document}
-
+\end{center}
