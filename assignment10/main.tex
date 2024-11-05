@@ -1,0 +1,169 @@
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{circuitikz}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{gvv}                                        
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{float}
+\usepackage{multicol}
+\usepackage{caption}
+\usetikzlibrary{patterns}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+
+% Marks the beginning of the document
+\begin{document}
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{Assignment 9}
+\author{DESABOINA SRI SATHWIK-AI24BTECH11007}
+\maketitle
+% Removed \newpage to avoid a blank first page
+\bigskip
+
+\section*{GATE-2015:PH}
+\begin{enumerate}
+	\item
+		In the given circuit, the voltage across the source resistor is $1 \, V$. The drain voltage (in $V$) is \rule{2cm}{0.4pt}
+
+		\hfill{(PH:2015)}
+		\begin{center}
+			\input{figs/1.tex}
+		\end{center}
+		\vspace{0.5cm}
+	\item
+		A point charge is placed between two semi-infinite conducting plates which are inclined at an angle of $30\degree$ with respect to each other. The number of image charges is  \rule{2.5cm}{0.4pt}
+
+		\hfill{(PH:2015)}
+		\vspace{0.5cm}
+	\item 
+		A beam of X-ray of intensity $I_0$ is incident normally on a metal sheet of thickness $2 \, mm$. The intensity of the transmitted beam is $0.025I_0$. The linear absorption coefficient of the metal sheet (in $m^{-1}$) is \rule{2.5cm}{0.4pt} (upto one decimal place)
+
+		\hfill{(PH:2015)}
+		\vspace{0.5cm}
+		\item
+			The lattice parameters $a$, $b$, $c$ of an orthorhombic crystal are related by $a=\, 2b= \, 3c$. In units of $a$, the interplanar separation between the $(110)$ planes is \rule{2cm}{0.4pt} (upto three decimal places)
+
+			\hfill{(PH:2015)}
+			\vspace{0.5cm}
+		\item
+			In a Hall effect experiment, the Hall voltage for an intrinsic semiconductor is negative. This is because (symbols carry usual meaning)
+
+			\hfill{(PH:2015)}
+		\begin{multicols}{4}
+			\begin{enumerate}
+				\item $n\approx p$
+				\item $n > p$
+				\item $\mu_e > \mu_h$
+				\item ${m_e}^* > {m_h}^*$
+			\end{enumerate}
+		\end{multicols}
+	\item
+		The space between two plates of a capacitor carrying charges $+Q$ and $-Q$ is filled with two different dielectric materials, as shown in figure. Across the interface of the two dielectric materials, which one of the following statements is correct?
+		\begin{center}
+			\input{figs/6.tex}
+		\end{center}
+
+		\hfill{(PH:2015)}
+		\vspace{0.5cm}
+	\begin{multicols}{2}
+			\begin{enumerate}
+				\item $\overrightarrow{E}$ and $\overrightarrow{D}$ are continuous
+				\item $\overrightarrow{E}$ is continuous and $\overrightarrow{D}$ is discontinuous
+				\item $\overrightarrow{D}$ is continuous and $\overrightarrow{E}$ is discontinuous
+				\item $\overrightarrow{E}$ and $\overrightarrow{D}$ are discontinuous
+			\end{enumerate}
+		\end{multicols}
+	\item 
+		The energy dependence of the density of states for a two dimensional non-relativistic electron gas is given by, $g(E) = CE^n$, where $C$ is constant. The value of $n$ is \rule{2.5cm}{0.4pt}
+
+		\hfill{(PH:2015)}
+		\vspace{0.5cm}
+	\item
+		The dispersion relation for phonons in a one-dimensional monatomic Bravais lattice with lattice spacing $a$ and consisting of ions of masses $M$ is given by, $\omega(k) = \sqrt{\frac{2C}{M} \left[ 1 - \cos(ka) \right]},$ where $\omega$ is the frequency of oscillation, $k$ is the wavevector, and $C$ is the spring constant. For the long wavelength modes $(\lambda \gg a)$, the ratio of the phase velocity to the group velocity is \rule{2cm}{0.4pt}
+
+		\hfill{(PH:2015)}
+		\vspace{0.5cm}
+	\item
+		Four forces are given below in Cartesian and spherical polar coordinates.
+\begin{itemize}
+    \item[(i)] $\vec{F}_1 = K \exp\left(-\frac{r^2}{R^2}\right) \hat{r}$
+    \item[(ii)] $\vec{F}_2 = K ( x^3 \hat{y} - y^3 \hat{z} )$
+    \item[(iii)] $\vec{F}_3 = K ( x^3 \hat{x} + y^3 \hat{y} )$
+    \item[(iv)] $\vec{F}_4 = K \left( \frac{\hat{\phi}}{r} \right)$
+\end{itemize}
+
+where $K$ is a constant. Identify the correct option.
+
+\hfill{(PH:2015)}
+
+\begin{enumerate}
+    \item (iii) and (iv) are conservative but (i) and (ii) are not
+    \item (i) and (ii) are conservative but (iii) and (iv) are not
+    \item (ii) and (iii) are conservative but (i) and (iv) are not
+    \item (i) and (iii) are conservative but (ii) and (iv) are not
+\end{enumerate}
+\item 
+	Consider a system of eight non-interacting, identical quantum particles of spin$-\frac{3}{2}$ in a one dimensional box of length $L$. The minimum excitation energy of the system, in units of $\frac{\pi^2 \hbar^2}{2mL^2}$ is \rule{2cm}{0.4pt}
+
+	\hfill{(PH:2015)}
+	\vspace{0.5cm}
+\item
+	The excitation wavelength of laser in a Raman effect experiment is $546 \, nm$, then the wavenumber of the anti-Stokes' line (in $cm^{-1}$) is \rule{2cm}{0.4pt}
+
+	\hfill{(PH:2015)}
+	\vspace{0.5cm}
+\item
+	The binding energy per molecule of NaCl (lattice parameter is $0.563\, nm$) is $7.95\, eV$. The repulsive term of the potential is of the form $\frac{K}{r^9}$, where $K$ is a constant. The value of the Madelung constant is \rule{2cm}{0.4pt} (upto three decimal places)\\
+	(Electron charge $e=\, -1.6\times 10^{-19}\, C;\, \epsilon_0 =\, 8.854\times 10^{-12} \, C^2 N^{-1} m^{-2}$  )
+
+	\hfill{(PH:2015)}
+	\vspace{0.5cm}
+\item
+	Given that the Fermi energy of gold is $5.54\, eV$, the number density of electrons is\\
+	\rule{2cm}{0.4pt} $\times 10^{28}\, m^{-3}$ (upto one decimal place)\\
+	\vspace{0.5cm}
+(Mass of electron$=\, 9.11\times 10^{-31} \, kg;h=\, 6.626\times 10^{-34}J\cdot s; 1\, eV= \, 1.6\times 10^{-19}\, J$)
+
+	\hfill{(PH:2015)}
+
+
+
+
+\end{enumerate}
+\end{document}
+

@@ -1,0 +1,250 @@
+%iffalse
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+%\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{float}
+\usepackage{multicol}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+
+% Marks the beginning of the document
+\begin{document}
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{Assignment 1}
+\author{DESABOINA SRI SATHWIK-AI24BTECH11007}
+\maketitle
+\newpage
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\section*{MCQs with One Correct Answer}
+\begin{enumerate}
+\item
+The value of the integral $\int_{-\pi/2}^{\pi/2}(x^2+\ln\frac{\pi+x}{\pi-x})\cos xdx$ is
+
+	\hfill{(2012)}
+		\begin{multicols}{4}
+                \begin{enumerate}
+        \item 0
+        \item $\frac{\pi^2}{2}-4$
+        \item $\frac{\pi^2}{2}+4$
+        \item $\frac{\pi^2}{2}$
+                \end{enumerate}
+		\end{multicols}
+\item
+The area enclosed by the curves $y=\sin x+\cos x$ and $y=|\cos x-\sin x|$ over the interval $[0,\pi/2]$ is
+
+		\hfill{(JEE Adv.2013)}
+		\begin{multicols}{2}
+		\begin{enumerate}
+			\item $4(\sqrt{2}-1)$
+			\item $2\sqrt{2}(\sqrt{2}-1)$
+			\item $2(\sqrt{2}+1)$
+			\item $2\sqrt{2}(\sqrt{2}+1)$
+		\end{enumerate}
+		\end{multicols}
+	\item
+		Let $f:[\frac{1}{2},1]\rightarrow R$ (the set of all real number) be a positive, non-constant and differentiable function such that $f'(x)<2f(x)$ and $f(\frac{1}{2})=1$. Then the value of $\int_{\frac{1}{2}}^{1}f(x) dx $ lies in the interval  
+
+		\hfill{(JEE Adv.2013)}
+		\begin{multicols}{2}
+		\begin{enumerate}
+			\item $(2e-1,2e)$
+			\item $(e-1,2e-1)$
+			\item $(\frac{e-1}{2},e-1)$
+			\item $(0,\frac{e-1}{2})$
+		\end{enumerate}
+		\end{multicols}
+	\item
+		The following integral $\int_{\frac{\pi}{4}}^{\frac{\pi}{2}}(2\cosec x)^{17}dx$ is equal to
+
+		\hfill{(JEE Adv.2014)}
+		\begin{enumerate}
+			\item $\int_{0}^{\log(1+\sqrt{2})}2(e^u+e^{-u})^{16} du$
+			\item $\int_{0}^{\log(1+\sqrt{2})}(e^u+e^{-u})^{17} du$
+			\item $\int_{0}^{\log(1+\sqrt{2})}(e^u-e^{-u})^{17} du$
+			\item $\int_{0}^{\log(1+\sqrt{2})}2(e^u-e^{-u})^{16} du$
+		\end{enumerate}
+	\item 
+		The value of$\int_{\frac{\pi}{2}}^{\frac{\pi}{2}}\frac{x^2\cos x}{1+e^x} dx$ is equal to
+
+		\hfill{(JEE Adv.2016)}
+		\begin{multicols}{2}
+		\begin{enumerate}
+			\item $\frac{\pi^2}{4}-2$
+			\item $\frac{\pi^2}{4}+2$
+                        \item $\pi^2-e^{\frac{\pi}{2}}$
+			\item $\pi^2+e^{\frac{\pi}{2}}$
+		\end{enumerate}
+		\end{multicols}
+	\item
+		Area of the region $\{(x,y)\in R^2:y\geq\sqrt{|x+3|},5y\leq x+9\leq15\}$ is equal to
+
+		\hfill{(JEE Adv.2016)}
+		\begin{multicols}{4}
+		\begin{enumerate}
+			\item $\frac{1}{6}$
+			\item $\frac{4}{3}$
+			\item $\frac{3}{2}$
+			\item $\frac{5}{3}$
+		\end{enumerate}
+		\end{multicols}
+	\item
+		The area of the region$\{(x,y):xy\leq8,1\leq{y}\leq{x^2}\}$ is
+
+		\hfill{(JEE Adv.2018)}
+		\begin{multicols}{2}
+		\begin{enumerate}
+			\item $8\log_e2-\frac{14}{3}$
+			\item $16\log_e2-\frac{14}{3}$
+			\item $8\log_e2-\frac{7}{3}$
+			\item $16\log_e2-6$
+		\end{enumerate}
+		\end{multicols}
+
+\end{enumerate}
+\section*{MCQs with One or More than One Correct}
+\begin{enumerate}
+	\item
+		If $\int_{0}^{x}f(t)dt=x+\int_{x}^{1}tf(t)dt$, then the value of $f(1)$ is 
+
+		\hfill{(1998-2 Marks)}
+		\begin{multicols}{4}
+		\begin{enumerate}
+			\item $\frac{1}{2}$
+			\item $0$
+			\item 1
+			\item $\frac{-1}{2}$
+		\end{enumerate}
+		\end{multicols}
+	\item
+		Let $f(x)=x-[x]$,for every real number x, where [x] is the integral part of x. Then $\int_{-1}^{1}f(x)dx$ is 
+
+		\hfill{(1998-2 Marks)}
+		\begin{multicols}{4}
+		\begin{enumerate}
+			\item 1
+			\item 2
+			\item 0
+			\item $\frac{1}{2}$
+		\end{enumerate}  
+			\end{multicols}
+	\item 
+		For which of the following values of m, is the area of the region bounded by the curve $y=x-x^2$ and the line $y=mx$ equals $\frac{9}{2}$?
+
+		\hfill{(1999-3 Marks)}
+		\begin{multicols}{4}
+		\begin{enumerate}
+			\item -4
+			\item -2
+			\item 2
+			\item 4
+		\end{enumerate}
+		\end{multicols}
+	\item 
+		Let $f(x)$ be a non-constant twice differentiable function definied on $(-\infty,\infty)$ such that $f(x)=f(1-x)$ and $f'(\frac{1}{4})=0$. Then,
+
+		\hfill{(2008)}
+		\begin{enumerate}
+			\item $f"(x)$ vanishes at least twice on $[0,1]$
+			\item $f'(\frac{1}{2})=0$
+			\item $\int_{\frac{-1}{2}}^{\frac{1}{2}}f(x+\frac{1}{2})\sin xdx=0$
+			\item $\int_{0}^{\frac{1}{2}}f(t)e^{\sin \pi{t}}dt=\int_{\frac{1}{2}}^{1}f(1-t)e^{\sin \pi{t}}dt$
+		\end{enumerate}
+	\item
+		Area of the region bounded by the curve $y=e^x$ and lines $x=0$ and $y=e$ is
+
+		\hfill{(2009)}
+		\begin{multicols}{2}
+		\begin{enumerate}
+			\item $e-1$
+			\item $\int_{1}^{e}\ln (e+1-y)dy$
+			\item $e-\int_{0}^{1}e^xdx$
+			\item $\int_{1}^{e}\ln ydy$
+		\end{enumerate}
+			\end{multicols}
+	\item 
+		If $I_n=\int_{-\pi}^{\pi}\frac{\sin{nx}}{(1+{\pi}^x)\sin x}dx$ $n=0,1,2, ...,$ then
+
+		\hfill{(2009)}
+		\begin{multicols}{2}
+		\begin{enumerate}
+			\item $I_{n}=I_{n+2}$
+			\item $\sum_{m=1}^{10}I_{2m+1}=10\pi$
+			\item $\sum_{m=1}^{10}I_{2m}=0$
+			\item $I_{n}=I_{n+1}$
+		\end{enumerate}
+			\end{multicols}
+	\item 
+		The value(s) of $\int_{0}^{1}\frac{x^4(1-x)^4}{1+x^2}dx$ is(are)
+
+		\hfill{(2010)}
+		\begin{multicols}{2}
+		\begin{enumerate}
+			\item  $\frac{22}{7}-\pi$
+			\item $\frac{2}{105}$
+			\item $0$
+			\item $\frac{71}{15}-\frac{3\pi}{2}$
+		\end{enumerate}
+			\end{multicols}
+	\item 
+		Let $f$ be a real-valued function defined on the interval $(0,\infty)$ by $f(x)=\ln x+\int_{0}^{x}\sqrt{1+\sin t}dt$. Then which of the following statement(s) is(are) true?
+
+		\hfill{(2010)}
+		\begin{enumerate}
+			\item $f"(x)$ exists for all $x\in(0,\infty)$
+			\item $f'(x)$ exists for all $x\in(0,\infty)$ and $f'$ is continuous on $(0,\infty)$, but not differentiable on $(0,\infty)$
+			\item there exists $\alpha>1$ such that $|f'(x)|<|f(x)|$ for all $x\in(\alpha,\infty)$
+			\item there exists $\beta>0$ such that $|f(x)|+|f'(x)|\leq\beta$ for all $x\in(0,\infty)$
+		\end{enumerate}
+
+
+
+
+
+
+
+\end{enumerate}
+\end{document}

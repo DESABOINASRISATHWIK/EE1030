@@ -1,0 +1,10 @@
+\begin{tikzpicture}
+    % Draw the axes
+    \draw[->] (-2.2, 0) -- (2.2, 0) node[below] {$x$};
+    \draw[->] (0, -2) -- (0, 2) node[above] {$p$};
+    
+    % Draw the shape using Bézier curves
+    \draw[thick] (2,0) .. controls (0.5, 1.5) and (-0.5, 1.5) .. (-2, 0)
+                 .. controls (-0.5, -1.5) and (0.5, -1.5) .. (2, 0);
+\end{tikzpicture}
+

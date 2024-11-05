@@ -1,0 +1,28 @@
+
+\begin{circuitikz}
+    % Define the nodes and draw the circuit
+    \draw
+    % MOSFET transistor with labels
+    (0,0) node[nmos, anchor=S] (M) {}
+
+    % Source resistor to ground
+    (M.S) -- ++(0,-1) 
+    to[R=500~$\Omega$] ++(0,-1) node[ground]{}
+
+    % Gate resistor to ground
+    (M.G) -- ++(-1,0) 
+    to[R=2~M$\Omega$] ++(0,-2) node[ground]{}
+
+    % Drain resistor to power supply
+    (M.D) -- ++(0,1) 
+    to[R=5~k$\Omega$] ++(0,1) 
+    -- ++(0,0.5) node[vsource, rotate=0] {25 V};
+
+    % Draw a large circle around the NMOS transistor
+    \draw[thick] (M) circle (1cm); % Adjust the radius as needed
+    
+    % Draw a small circle at the other end of the 5 kΩ resistor (connected to the voltage source)
+    \draw[thick] ++(0, 3.7) circle (0.15cm); % Small circle at the top end of the 5 kΩ resistor
+
+\end{circuitikz}
+

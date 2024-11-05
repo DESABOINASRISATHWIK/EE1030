@@ -1,0 +1,217 @@
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{circuitikz}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{gvv}                                        
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{float}
+\usepackage{multicol}
+\usepackage{caption}
+\usetikzlibrary{patterns}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+
+% Marks the beginning of the document
+\begin{document}
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{Assignment 11}
+\author{DESABOINA SRI SATHWIK-AI24BTECH11007}
+\maketitle
+% Removed \newpage to avoid a blank first page
+\bigskip
+
+\section*{GATE-2018:PH}
+\begin{enumerate}
+    \item An interstellar object has speed $v$ at the point of its shortest distance $R$ from a star of much larger mass $M$. Given $v^2 = \frac{2GM}{R}$, the trajectory of the object is:
+
+    \hfill{(PH:2018)}
+		\begin{multicols}{4}
+    \begin{enumerate}
+        \item circle
+        \item ellipse
+        \item parabola
+        \item hyperbola
+    \end{enumerate}
+		\end{multicols}
+   
+
+    \item A particle moves in one dimension under a potential $V(x) = \alpha |x|$ with some non-zero total energy. Which one of the following best describes the particle trajectory in the phase space?
+
+    \hfill{(PH:2018)}
+		\begin{multicols}{2}
+    \begin{enumerate}
+	    \item \input{figs/2_1.tex}
+        \item \input{figs/2_2.tex}
+        \item \input{figs/2_3.tex}
+        \item \input{figs/2_4.tex}
+    \end{enumerate}
+			\end{multicols}
+    
+
+    \item Consider an infinitely long solenoid with $N$ turns per unit length, radius $R$ and carrying a current $I(t) = \alpha \cos \omega t$, where $\alpha$ is a constant and $\omega$ is the angular frequency. The magnitude of the electric field at the surface of the solenoid is:
+
+    \hfill{(PH:2018)}
+		\begin{multicols}{2}
+    \begin{enumerate}
+        \item $\frac{1}{2} \mu_0 N R \omega \alpha \sin \omega t$
+        \item $\frac{1}{2} \mu_0 \omega N R \cos \omega t$
+        \item $\mu_0 N R \omega \alpha \sin \omega t$
+        \item $\mu_0 \omega N R \cos \omega t$
+    \end{enumerate}
+\end{multicols}
+
+    \item A constant and uniform magnetic field $\vec{B} = B_0 \hat{z}$ pervades all space. Which one of the following is the correct choice for the vector potential in Coulomb gauge?
+
+    \hfill{(PH:2018)}
+		\begin{multicols}{4}
+    \begin{enumerate}
+        \item $-B_0(x + y)\hat{i}$
+        \item $B_0(x + y)\hat{j}$
+        \item $B_0 x \hat{j}$
+        \item $-\frac{1}{2} B_0 (x\hat{i} - y\hat{j})$
+    \end{enumerate}
+			\end{multicols}
+    
+
+    \item If $H$ is the Hamiltonian for a free particle with mass $m$, the commutator $[x, [x, H]]$ is:
+
+    \hfill{(PH:2018)}
+		\begin{multicols}{4}
+    \begin{enumerate}
+        \item $\frac{\hbar^2}{m}$
+        \item $-\frac{\hbar^2}{m}$
+        \item $-\frac{\hbar^2}{2m}$
+        \item $\frac{\hbar^2}{2m}$
+    \end{enumerate}
+			\end{multicols}
+ 
+
+    \item A long straight wire, having radius $a$ and resistance per unit length $r$, carries a current $I$. The magnitude and direction of the Poynting vector on the surface of the wire is:
+
+    \hfill{(PH:2018)}
+    \begin{enumerate}
+        \item $\frac{I^2 r}{2\pi a}$, perpendicular to the axis of the wire and pointing inwards
+        \item $\frac{I^2 r}{2\pi a}$, perpendicular to the axis of the wire and pointing outwards
+        \item $\frac{I^2 r}{\pi a}$, perpendicular to the axis of the wire and pointing inwards
+        \item $\frac{I^2 r}{\pi a}$, perpendicular to the axis of the wire and pointing outwards
+    \end{enumerate}
+   
+
+    \item Three particles are to be distributed in four non-degenerate energy levels. The possible number of ways of distribution: (i) for distinguishable particles, and (ii) for identical Bosons, respectively, is:
+
+    \hfill{(PH:2018)}
+    \begin{multicols}{4}
+    \begin{enumerate}
+        \item (i) $24$, (ii) $4$
+        \item (i) $24$, (ii) $20$
+        \item (i) $64$, (ii) $20$
+        \item (i) $64$, (ii) $16$
+    \end{enumerate}
+	    \end{multicols}
+  
+
+    \item The term symbol for the electronic ground state of oxygen atom is:
+
+    \hfill{(PH:2018)}
+    \begin{multicols}{4}
+    \begin{enumerate}
+        \item $^1S_0$
+        \item $^1D_{2}$
+        \item $^3P_0$
+        \item $^3P_{2}$
+    \end{enumerate}
+	    \end{multicols}
+    
+
+    \item The energy dispersion for electrons in one dimensional lattice with lattice parameter $a$ is given by $E(k) = E_0 - \frac{1}{2}W \cos ka$, where $W$ and $E_0$ are constants. The effective mass of the electron near the bottom of the band is:
+
+    \hfill{(PH:2018)}
+    \begin{multicols}{4}
+    \begin{enumerate}
+        \item $\frac{2\hbar^2}{W a^2}$
+        \item $\frac{\hbar^2}{W a^2}$
+        \item $\frac{\hbar^2}{2W a^2}$
+        \item $\frac{\hbar^2}{4W a^2}$
+    \end{enumerate}
+	    \end{multicols}
+
+
+    \item Amongst electrical resistivity ($\rho$), thermal conductivity ($\kappa$), specific heat ($C$), Young's modulus ($Y$), and magnetic susceptibility ($\chi$), which quantities show a sharp change at the superconducting transition temperature?
+
+    \hfill{(PH:2018)}
+    \begin{multicols}{4}
+    \begin{enumerate}
+        \item $\rho, \kappa, C, Y$
+        \item $\rho, C, \chi$
+        \item $\rho, \kappa, C, \chi$
+        \item $\kappa, Y, \chi$
+    \end{enumerate}
+	    \end{multicols}
+  
+  \item	  A quarter wave plate introduces a path difference of $\frac{\lambda}{4}$ between the two components of polarization parallel and perpendicular to the optic axis. An electromagnetic wave with $\overrightarrow{E} = (\hat{x} + \hat{y}) E_0 e^{i(kz - \omega t)} $ is incident normally on a quarter wave plate which has its optic axis making an angle $135\deg$ with the $x$-axis as shown.\\
+	  \begin{center}
+		  \input{figs/11.tex}
+	  \end{center}
+	  The emergent electromagnetic wave would be
+
+	  \hfill{(PH:2018)}
+	  \begin{enumerate}
+		  \item elliptically polarized
+		  \item circularly polarized
+		  \item linearly polarized with polarization as that of incident wave
+		  \item linearly polarized but with polarization at $90\deg$ to that of the incident wave
+	  \end{enumerate}
+  \item
+	  A $p$-doped semiconductor slab carries a current $I=100mA$ in a magnetic field $B=0.2T$ as shown. One measures $V_y =0.25mV$ and $V_x =2mV$. The mobility of holes in the semiconductor is \rule{2cm}{0.4pt}$m^2 V^{-1} s^{-1}$(up to two decimal places).
+
+	  \hfill{(PH:2018)}
+	  \begin{center}
+		  \input{figs/12.tex}
+	  \end{center}
+
+  \item
+	  An n-channel FET having Gate-Source switch-off voltage $V_{GS(OFF)}=-2V$ is used to invert a $0-5V$ square-wave signal as shown. The maximum allowed value of $R$ would be \rule{2cm}{0.4pt}$k\ohm$ (up to two decimal places).
+
+	  \hfill{(PH:2018)}
+ \begin{center}
+		  \input{figs/13.tex}
+	  \end{center}
+
+\end{enumerate}
+
+\end{document}

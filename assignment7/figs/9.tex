@@ -1,0 +1,42 @@
+\begin{tikzpicture}
+
+    % Beam
+    \draw[thick] (-4,0) -- (4,0);
+ \draw[thick] (-4,1.4) -- (4,1.4);
+ \draw[thick] (-4,1.7) -- (4,1.7);
+ \draw[thick] (-4,0) -- (-4,1.7);
+ \draw[thick] (4,0) -- (4,1.7);
+
+
+    % Supports
+    \draw[thick] (-4,-0.5) -- (-3.7,0);
+    \draw[thick] (-4.3,-0.5) -- (-4,0);
+    \draw[thick] (4,-0.5) -- (3.7,0);
+    \draw[thick] (4.3,-0.5) -- (4,0);
+    \draw[thick] (3.7,-0.5) -- (4,0);
+    \draw[thick] (3.4,-0.5) -- (3.7,0);
+	\draw[thick] (-3.7,-0.5) -- (-4,0);
+	\draw[thick] (-3.4,-0.5) -- (-3.7,0);
+
+    % Distributed load
+    \foreach \x in {-3.8,-3.4,...,3.8}
+        \draw[thick,->] (\x,1.7) -- (\x,1.4);
+
+    % Neutral Axis
+    \draw[dashed] (-4,0.7) -- (4,0.7);
+    \node at (4.2,0.7) {NA};
+
+    % Points P and Q
+    \draw[fill=black] (0,0.7) circle (0.05);
+    \node[above] at (0,0.75) {P};
+    \draw[fill=black] (0,0) circle (0.05);
+    \node[above] at (0,0.05) {Q};
+
+    % Dimensions
+    \draw[<->] (-4,-1.2) -- (0,-1.2);
+    \node[below] at (-2,-1.2) {L};
+    \draw[<->] (0,-1.2) -- (4,-1.2);
+    \node[below] at (2,-1.2) {L};
+
+\end{tikzpicture}
+

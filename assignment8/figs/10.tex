@@ -1,0 +1,39 @@
+\begin{tikzpicture}
+    % Define points with A and B further left and spaced vertically
+    \coordinate (A) at (-3,2.5);
+    \coordinate (B) at (-3,-2.5);
+    \coordinate (C) at (0,0);
+    \coordinate (F) at (3,0);
+
+    % Draw fixed supports at A and B
+    \fill[pattern=north east lines] (-3.15,2.8) rectangle (-2.7,2.2);
+    \fill[pattern=north east lines] (-3.15,-2.2) rectangle (-2.7,-2.8);
+    
+    % Draw circles at supports
+    \draw[thick] (A) circle(0.15);
+    \draw[thick] (B) circle(0.15);
+    \draw[thick] (C) circle(0.1);
+
+    % Draw the rods AC and BC
+    \draw[thick] (A) -- (C);
+    \draw[thick] (B) -- (C);
+
+    % Draw force arrow at C and label at the end
+    \draw[thick, ->] (C) -- (F) node[above right] {\large $F$};
+
+    % Draw a dashed line from C to the left
+    \draw[dashed] (C) -- ++(-2,0);
+
+    % Draw angle arcs and labels in correct positions
+    \draw[thick, ->] (-0.5,0) arc[start angle=180, end angle=135, radius=0.5];
+    \node at (-0.8,0.3) {\small $45^\circ$};
+    
+    \draw[thick, ->] (-0.6,0) arc[start angle=180, end angle=240, radius=0.5];
+    \node at (-0.8,-0.4) {\small $60^\circ$};
+
+    % Label points A, B, and C
+    \node[left] at (A) {\large $A$};
+    \node[left] at (B) {\large $B$};
+    \node[above right] at (C) {\large $C$};
+
+\end{tikzpicture}

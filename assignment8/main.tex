@@ -1,0 +1,252 @@
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{circuitikz}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{gvv}                                        
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{float}
+\usepackage{multicol}
+\usepackage{caption}
+\usetikzlibrary{patterns}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+
+% Marks the beginning of the document
+\begin{document}
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{Assignment 8}
+\author{DESABOINA SRI SATHWIK-AI24BTECH11007}
+\maketitle
+% Removed \newpage to avoid a blank first page
+\bigskip
+
+\section*{GATE-2012:ME}
+\label{}
+\begin{enumerate}
+    \item A large tank with a nozzle attached contains three immiscible, inviscid fluids as shown. Assuming that the changes in $h_1$, $h_2$ and $h_3$ are negligible, the instantaneous discharge velocity is
+	    \vspace{1cm}
+    \begin{center}
+	    \input{figs/1.tex}
+    \end{center}
+	    \hfill{(ME:2012)}
+		\begin{multicols}{2}
+    \begin{enumerate}
+        \item $ \sqrt{2g \left( \frac{\rho_1 h_1 + \rho_2 h_2 + \rho_3 h_3}{\rho_3 h_3} \right)} $
+        \item $\sqrt{2g(h_1 + h_2 + h_3)}$
+	\item $\sqrt{2g (\frac{\rho_1 h_1 + \rho_2 h_2 + \rho_3 h_3}{\rho_1 + \rho_2 + \rho_3})}$
+	\item $\sqrt{2g (\frac{\rho_1 h_2 h_3 + \rho_2 h_1 h_3 + \rho_3 h_1 h_2}{\rho_1 h_1 + \rho_2 h_2 + \rho_3 h_3})}$
+    \end{enumerate}
+		\end{multicols}
+
+    \item Water $(C_p = 4.18 \, kJ/kg.K)$ at $80^\circ C$ enters a counterflow heat exchanger with a mass flow rate of $0.5 \, kg/s$. Air $(C_p = 1 \, kJ/kg.K)$ enters at $30^\circ C$ with a mass flow rate of $2.09 \, kg/s$. If the effectiveness of the heat exchanger is 0.8, the LMTD (in $^\circ C$) is
+
+	     \hfill{(ME:2012)}
+		\begin{multicols}{4}
+    \begin{enumerate}
+        \item $40$
+        \item $20$
+        \item $10$
+        \item $5$
+    \end{enumerate}
+\end{multicols}
+
+    \item A solid steel cube constrained on all six faces is heated so that the temperature rises uniformly by $\Delta T$. If the thermal coefficient of the material is $\alpha$, Young's modulus is $E$ and the Poisson's ratio is $\nu$, the thermal stress developed in the cube due to heating is
+
+	     \hfill{(ME:2012)}
+		\begin{multicols}{4}
+    \begin{enumerate}
+	    \item $-\frac{\alpha E \Delta T}{(1 - 2\nu)}$
+	    \item $-\frac{2 \alpha E \Delta T}{(1 - 2\nu)}$
+	    \item $-\frac{3 \alpha E \Delta T}{(1 - 2\nu)}$
+        \item $-\frac{\alpha E \Delta T}{3(1 - 2\nu)}$
+    \end{enumerate}
+		\end{multicols}
+
+    \item 
+	    A solid circular shaft needs to be designed to transmit a torque of $50 \, N.m$. If the allowable shear stress of the material is $140 \, MPa$, assuming a factor of safety of $2$, the minimum allowable design diameter in $mm$ is
+
+		 \hfill{(ME:2012)}
+		\begin{multicols}{4}
+    \begin{enumerate}
+        \item $8$
+        \item $16$
+        \item $24$
+        \item $32$
+    \end{enumerate}
+		\end{multicols}
+
+    \item 
+	    A force of $400 \, N$ is applied to the brake drum of $0.5 \, m$ diameter in a band-brake system as shown in the figure, where the wrapping angle is $180^\circ$. If the coefficient of friction between the drum and the band is 0.25, the braking torque applied, in $N.m$ is
+		\vspace{1cm}
+		\begin{center}
+			\input{figs/5.tex}
+		\end{center}
+
+		 \hfill{(ME:2012)}
+\begin{multicols}{4}
+    \begin{enumerate}
+        \item $100.6$
+        \item $54.4$
+        \item $22.1$
+        \item $15.7$
+    \end{enumerate}
+\end{multicols}
+
+    \item A box contains $4$ red balls and $6$ black balls. Three balls are selected randomly from the box one after another, without replacement. The probability that the selected set contains one red ball and two black balls is
+
+	     \hfill{(ME:2012)}
+\begin{multicols}{4}
+    \begin{enumerate}
+        \item $\frac{1}{20}$
+        \item $\frac{1}{12}$
+        \item $\frac{3}{10}$
+        \item $\frac{1}{2}$
+    \end{enumerate}
+\end{multicols}
+
+    \item 
+	    Consider the differential equation
+   $ x^2 \frac{d^2y}{dx^2} + 4x \frac{dy}{dx} - 4y = 0$
+    with the boundary conditions of $y(0) = 0$ and $y(1) = 1$. The complete solution of the differential equation is
+
+     \hfill{(ME:2012)}
+\begin{multicols}{4}
+    \begin{enumerate}
+        \item $x^2$
+	\item $\sin (\frac{\pi x}{2})$
+	\item $e^x \sin (\frac{\pi x}{2})$
+	\item $e^{-x} \sin (\frac{\pi x}{2})$
+    \end{enumerate}
+\end{multicols}
+
+    \item
+$x + 2y + z = 4 \\
+2x + y + 2z = 5 \\
+x - y + z = 1$\\
+    The system of algebraic equations given above has
+
+     \hfill{(ME:2012)}
+    \begin{enumerate}
+        \item a unique solution of $x = 1, y = 1$ and $z = 1$.
+        \item only the two solutions of $(x = 1, y = 1, z = 1)$ and $(x = 2, y = 1, z = 0)$.
+        \item infinite number of solutions.
+        \item no feasible solution.
+    \end{enumerate}
+\vspace{0.5cm}
+     \textbf{Common data for questions \ref{a} and \ref{b}} \\ 
+    Two steel truss members, $AC$ and $BC$, each having cross-sectional area of $100 \, {mm}^2$, are subjected to a horizontal force $F$ as shown in figure. All the joints are hinged.
+    \begin{center}
+	    \input{figs/10.tex}
+    \end{center}
+
+     \hfill{(ME:2012)}
+
+        \item
+		If $F = 1 \, kN$, the magnitude of the vertical reaction force developed at the point $B$ in $kN$ is
+		\label{a}
+		\begin{multicols}{4}
+        \begin{enumerate}
+            \item $0.63$
+            \item $0.32$
+            \item $1.26$
+            \item $1.46$
+        \end{enumerate}
+		\end{multicols}
+        \item
+		The maximum force $F$ in kN that can be applied at $C$ such that the axial stress in any of the truss members DOES NOT exceed $100 \, MPa$ is
+		\label{b}
+		\begin{multicols}{4}
+        \begin{enumerate}	
+            \item $8.17$
+            \item $11.15$
+            \item $14.14$
+            \item $22.30$
+        \end{enumerate}
+	\end{multicols}
+\vspace{0.5cm}
+     \textbf{Common data for questions \ref{c} and \ref{d}} \\ 
+    A refrigerator operates between $120 \, kPa$ and $800 \, kPa$ in an ideal vapor compression cycle with $R-134a$ as the refrigerant. The refrigerant enters the compressor as saturated vapor and leaves the condenser as saturated liquid. The mass flow rate of the refrigerant is $0.2 \, kg/s$. Properties for $R-134a$ are as follows:
+    \vspace{0.01cm}
+    \input{tables/table1.tex}
+    \vspace{0.1cm}
+    \input{tables/table2.tex}
+
+     \hfill{(ME:2012)}
+
+        \item
+		The rate at which heat is extracted, in $kJ/s$ from the refrigerated space is
+		\label{c}
+		\begin{multicols}{4}
+        \begin{enumerate}
+            \item $28.3$
+            \item $42.9$
+            \item $34.4$
+            \item $14.6$
+        \end{enumerate}
+		\end{multicols}
+
+        \item
+		The power required for the compressor in $kW$ is
+		\label{d}
+		\begin{multicols}{4}
+        \begin{enumerate}
+            \item $5.94$
+            \item $1.83$
+            \item $7.9$
+            \item $39.5$
+        \end{enumerate}
+		\end{multicols}
+\vspace{0.5cm}
+    \textbf{Linked Answer Questions:}\\
+    Air enters an adiabatic nozzle at $300 \, kPa, 500 \, K$ with a velocity of $10 \, m/s$. It leaves the nozzle at $100 \, kPa$ with a velocity of $180 \, m/s$. The inlet area is $80 \, {cm}^2$. The specific heat of air $C_p$ is $1008 \, J/kg.K$.
+
+     \hfill{(ME:2012)}
+
+        \item
+		The exit temperature of the air is
+		\begin{multicols}{4}
+        \begin{enumerate}
+            \item $516 \, K$
+            \item $532 \, K$
+            \item $484 \, K$
+            \item $468 \, K$
+        \end{enumerate}
+		\end{multicols}
+\end{enumerate}
+\end{document}
+

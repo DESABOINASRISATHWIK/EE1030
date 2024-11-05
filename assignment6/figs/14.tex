@@ -1,0 +1,38 @@
+\begin{tikzpicture}
+
+% Define points
+\coordinate (Q) at (0,0);
+\coordinate (R) at (6,0);
+\coordinate (P) at (3,3);
+
+% Draw the truss members
+\draw[thick] (Q) -- (P) -- (R);
+\draw[thick] (Q) -- (R);
+
+% Draw the force F
+\draw[thick,<-] (P) -- +(0,2) node[above] {$F$};
+
+% Draw support at Q (hinged)
+\draw[thick] (Q) -- +(-0.5,-0.5);
+\draw[thick] (Q) -- +(0.5,-0.5);
+\draw[thick] (Q) -- +(0,-0.7);
+
+% Draw support at R (roller)
+\draw[thick] (R) -- +(0,-0.5);
+\draw[thick] (R) -- +(0.5,-0.5);
+\draw[thick] (R) -- +(0,-0.7);
+\draw[thick] (R) -- +(-0.5,-0.5);
+
+% Add angle markers
+\draw[thick] (0.5,0) arc[start angle=0,end angle=45,radius=0.5];
+\node at (0.8,0.25) {$45^\circ$};
+
+\draw[thick] (5.5,0) arc[start angle=180,end angle=150,radius=0.8];
+\node at (5,0.25) {$30^\circ$};
+
+% Label points
+\node at (Q) [left] {$Q$};
+\node at (R) [right] {$R$};
+\node at (P) [above left] {$P$};
+
+\end{tikzpicture}

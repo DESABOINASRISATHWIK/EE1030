@@ -1,0 +1,31 @@
+\begin{tikzpicture}
+
+% Draw the beam
+\draw (0,0) -- (6,0); % Horizontal beam
+
+% Supports
+\draw (0,0) node[ground, rotate=90]{};   % Pin support on the left
+\draw (6,0) circle (3pt);                % Roller support on the right
+
+% Load points and forces
+\draw[thick, ->] (2,0.5) -- (2,0); % Force P at 2L from the left
+\draw[thick, ->] (4,0.5) -- (4,0); % Force P at 2L from the right
+
+% Labels
+\node at (2,0.7) {$P$}; % Label for the first force
+\node at (4,0.7) {$P$}; % Label for the second force
+\node at (1, -0.3) {$L$}; % Left distance label
+\node at (5, -0.3) {$L$}; % Right distance label
+\node at (3, -0.3) {$2L$}; % Middle distance label
+
+% Dashed lines for distances
+\draw[dashed] (2,0) -- (2,-0.7); % Left force vertical line
+\draw[dashed] (4,0) -- (4,-0.7); % Right force vertical line
+
+% Distance labels
+\draw[<->] (0,-0.5) -- (2,-0.5);
+\draw[<->] (2,-0.5) -- (4,-0.5);
+\draw[<->] (4,-0.5) -- (6,-0.5);
+
+\end{tikzpicture}
+
