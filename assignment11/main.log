@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.11.4)  5 NOV 2024 11:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.11.4)  5 NOV 2024 21:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1476,10 +1476,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 186--187
 
  []
 
-(./figs/11.tex) [2] (./figs/12.tex) (./figs/13.tex
-\absvshift=\dimen371
-\absvshift=\dimen372
-) [3] (./main.aux)
+(./figs/11.tex) [2] (./figs/12.tex
+LaTeX Font Info:    Calculating math sizes for size <14> on input line 25.
+) (./figs/13.tex) [3] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
@@ -1488,13 +1487,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 48909 strings out of 474222
- 1139472 string characters out of 5748733
- 1951975 words of memory out of 5000000
- 70349 multiletter control sequences out of 15000+600000
- 618006 words of font info for 154 fonts, out of 8000000 for 9000
+ 48857 strings out of 474222
+ 1138560 string characters out of 5748733
+ 1955975 words of memory out of 5000000
+ 70287 multiletter control sequences out of 15000+600000
+ 642393 words of font info for 218 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 99i,14n,101p,1167b,1096s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,14n,101p,1167b,1038s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtcxr.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/f
@@ -1502,7 +1501,7 @@ onts/type1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
 ublic/txfonts/txsyb.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/ut
 mb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (3 pages, 65212 bytes).
+Output written on main.pdf (3 pages, 64575 bytes).
 PDF statistics:
  137 PDF objects out of 1000 (max. 8388607)
  114 compressed objects within 2 object streams

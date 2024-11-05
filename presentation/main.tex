@@ -88,157 +88,34 @@ Show that the point $\myvec{x \\ y}$ given by $x = \frac{2at}{1 + t^2}$ and $y =
 
 %\subsection{Literature}
 \section{Solution}
-\subsection{Linear Equation}
+\subsection{Usage of variables}
 \begin{frame}
-\frametitle{Linear Equation}
-%\framesubtitle{Literature}
-Let the balanced version of \eqref{eq:chem_balance} be 
-%
-\begin{align}
-\label{eq:chem_balance_unsol}
-x_1Fe+x_2H_2 O &\rightarrow x_3Fe_3 O_4 + x_4H_2
-\end{align}
-%
-which results in the following equations
-%
-\begin{align}
-\begin{split}
-\brak{x_1 -3x_3}Fe &= 0
-\\
-\brak{2x_2 -2x_4}H &= 0
-\\
-\brak{x_2 -4x_3}H &= 0
-\end{split}
-\end{align}
-%Let $\vec{O}$ be the centre of $C$. Then the equation of the normal, OQ is
-%\begin{align}
-%%\vec{x}^T\vec{x}-2\vec{O}^T\vec{x} +F = 0
-%\myvec{0 & 1}\brak{\vec{O}-\vec{Q}} &= 0
-%\nonumber \\ 
-%\implies \myvec{0 & 1}\vec{O} = 2
-%\label{eq:circle_7_o1}
-%\end{align}
-%%
-%Also, 
-%%Substituting \eqref{eq:circle_7_p} in \eqref{eq:circle_7_c}, 
-%\begin{align}
-%\norm{\vec{O}-\vec{P}}^2&=\norm{\vec{O}-\vec{Q}}^2 
-%\nonumber \\
-%\implies 2\brak{\vec{P}-\vec{Q}}^T\vec{O} &= \norm{\vec{P}}^2-\norm{\vec{Q}}^2 
-%\nonumber \\
-%\text{or, } \myvec{1 & -1}\vec{O} &= -4
-%\label{eq:circle_7_o2}
-%\end{align}
-%%
-%\eqref{eq:circle_7_o1} and \eqref{eq:circle_7_o2} result in the matrix equation
-%\begin{align}
-%\myvec{1 & -1 \\ 0 & 1}\vec{O} = \myvec{-4\\2}
-%\label{eq:circle_7_matrix}
-%\end{align}
-%yielding the augmented matrix
-%\begin{align}
-%\myvec{1 & -1 & -4\\ 0 & 1 & 2} \leftrightarrow \myvec{1 & 0 & -2\\ 0 & 1 & 2}\implies \vec{O} = \myvec{-2 \\2}
-%\label{eq:circle_7_o}
-%\end{align}
-%%
+\frametitle{Usage of variables}
+	\input{tables/table.tex}
 \end{frame}
-\subsection{Matrix Equation}
+\subsection{Parametric form}
 \begin{frame}
-\frametitle{Matrix Equation}
-The linear equations can be expxressed as
-%\begin{enumerate}[label=(\roman*)]
-\begin{align}
-\begin{split}
-x_1 + 0.x_2 -3x_3 +0.x_4&= 0
-\\
-0.x_1+2x_2 +0.x_3-2x_4 &= 0
-\\
-0.x_1+x_2 -4x_3+ 0.x_4 &= 0
-\end{split}
-\end{align}
-%
-resulting in the matrix equation
-\begin{align}
-\label{eq:chem_balance_mat_eq}
-\begin{split}
-\myvec{
-1 & 0 & -3 & 0
-\\
-0 & 2 & 0 & -2
-\\
-0 & 1 & -4 & 0
-}
-\vec{x} &= \vec{0}
-\end{split}
-\end{align}
-where
-\begin{align}
-\vec{x} = \myvec{x_1 \\ x_2 \\ x_3 \\ x_4} 
-\end{align}
-%\item $\myvec{4 & 5}\vec{O} = 2 \ne 6 $. Incorrect.
-%\vfill
-%\item $\myvec{2 & -3}\vec{O} +10 = 0 $. Correct.
-%\vfill
-%\item $\myvec{3 & 4}\vec{O} = 2 \ne 3 $.  Incorrect.
-%\vfill
-%\item $\myvec{5 & 2}\vec{O} +4= -2 \ne 0 $. Incorrect
-%\end{enumerate}
+\frametitle{Parametric form}
+Given $x$ and $y$ in the parametric form,\\
+	\begin{align}
+		x &= \frac{2at}{1 + t^2},\\
+		\quad y &= \frac{a(1 - t^2)}{1 + t^2}
+	\end{align}
+	Let $\vec{p(t)}$ be equal to,\\
+	\begin{align}
+	\mathbf{p}(t) = \myvec{x \\ y} = \myvec{\frac{2at}{1 + t^2} \\ \frac{a(1 - t^2)}{1 + t^2}}.
+	\end{align}
+
+
 \end{frame}
-\subsection{Row Reduction}
+\subsection{Verification}
 \begin{frame}
-\frametitle{Row Reduction}
-\eqref{eq:chem_balance_mat_eq} can be row reduced as follows
-%
-\begin{align}
-\label{eq:chem_balance_mat_row}
-\myvec{
-1 & 0 & -3 & 0
-\\
-0 & 2 & 0 & -2
-\\
-0 & 1 & -4 & 0
-}
- \xleftrightarrow[]{R_2 \leftarrow \frac{R_2}{2}}
-\myvec{
-1 & 0 & -3 & 0
-\\
-0 & 1 & 0 & -1
-\\
-0 & 1 & -4 & 0
-}
-\\
- \xleftrightarrow[]{R_3\leftarrow R_3-R_2}
-\myvec{
-1 & 0 & -3 & 0
-\\
-0 & 1 & 0 & -1
-\\
-0 & 0 & -4 & 1
-}
-\\
- \xleftrightarrow[]{R_1\leftarrow 4R_1-3R_3}
-\myvec{
-4 & 0 & 0 & -3
-\\
-0 & 1 & 0 & -1
-\\
-0 & 0 & -4 & 1
-}
-\\
- \xleftrightarrow[R_3 \leftarrow -\frac{1}{4}R_3]{R_1\leftarrow \frac{1}{4}}
-\myvec{
-1 & 0 & 0 & -\frac{3}{4}
-\\
-0 & 1 & 0 & -1
-\\
-0 & 0 & 1 & -\frac{1}{4}
-}
-\end{align}
-%
-%The radius  of $C$ is obtained as
-%\begin{align}
-%r = \norm{O-P} = 2
-%\end{align}
+\frametitle{Verification}
+	The transformation matrix $\vec{A(t)}$ with parameter $t$ is,\\
+	\begin{align}
+		\mathbf{A}(t) & = \myvec{ \frac{2a}{1+t^2} & 0 \\ 0 & \frac{a(1-t^2)}{1+t^2}},\\ \text{Then, we get} \vec{p(t)},\\ \mathbf{p}(t) & = \myvec{ \frac{2a}{1+t^2} & 0 \\ 0 & \frac{a(1 - t^2)}{1+t^2} } \myvec{t \\ 1},\\ \text{That implies, we get}\\ \mathbf{p}(t)^T \myvec{ 1 & 0 \\ 0 & 1} \mathbf{p}(t) = a^2\\ \text{Therefore, we can say that}\\
+	x^2 + y^2 = a^2.
+	\end{align}
 \end{frame}
 %\section{Plot}
 \subsection{Balanced Equation}
@@ -261,10 +138,11 @@ upon substituting $x_4 = 4$.
 \label{eq:chem_balance_final}
 3Fe+4H_2 O &\rightarrow Fe_3 O_4 + 4H_2
 \end{align}
-The code in 
+The codes in 
 {\footnotesize
 \begin{lstlisting}
-https://github.com/gadepall/school/blob/master/training/chemistry/codes/chembal.py
+https://github.com/DESABOINASRISATHWIK/EE1030/blob/main/presentation/codes/plot.py
+https://github.com/DESABOINASRISATHWIK/EE1030/blob/main/presentation/codes/code.c
 \end{lstlisting}
 }
 verifies \eqref{eq:chem_balance_mat_sol}.

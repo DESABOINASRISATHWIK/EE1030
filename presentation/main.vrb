@@ -16,10 +16,11 @@ upon substituting $x_4 = 4$.
 \label{eq:chem_balance_final}
 3Fe+4H_2 O &\rightarrow Fe_3 O_4 + 4H_2
 \end{align}
-The code in
+The codes in
 {\footnotesize
 \begin{lstlisting}
-https://github.com/gadepall/school/blob/master/training/chemistry/codes/chembal.py
+https://github.com/DESABOINASRISATHWIK/EE1030/blob/main/presentation/codes/plot.py
+https://github.com/DESABOINASRISATHWIK/EE1030/blob/main/presentation/codes/code.c
 \end{lstlisting}
 }
 verifies \eqref{eq:chem_balance_mat_sol}.
