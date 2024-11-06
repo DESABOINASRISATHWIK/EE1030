@@ -4,4 +4,5 @@
 \beamer@subsectionintoc {3}{2}{Parametric form}{5}{0}{2}
 \beamer@subsectionintoc {3}{3}{Matrix equation}{6}{0}{2}
 \beamer@subsectionintoc {3}{4}{Verification}{7}{0}{2}
-\beamer@subsectionintoc {3}{5}{Plot}{8}{0}{2}
+\beamer@subsectionintoc {3}{5}{Codes}{8}{0}{2}
+\beamer@subsectionintoc {3}{6}{Plot}{9}{0}{2}

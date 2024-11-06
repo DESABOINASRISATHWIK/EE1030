@@ -30,11 +30,15 @@
 \headcommand {\slideentry {3}{4}{1}{7/7}{Verification}{0}}
 \headcommand {\beamer@framepages {7}{7}}
 \headcommand {\beamer@subsectionpages {7}{7}}
-\headcommand {\beamer@subsectionentry {0}{3}{5}{8}{Plot}}
-\headcommand {\slideentry {3}{5}{1}{8/8}{Plot}{0}}
+\headcommand {\beamer@subsectionentry {0}{3}{5}{8}{Codes}}
+\headcommand {\slideentry {3}{5}{1}{8/8}{Codes}{0}}
 \headcommand {\beamer@framepages {8}{8}}
-\headcommand {\beamer@partpages {1}{8}}
 \headcommand {\beamer@subsectionpages {8}{8}}
-\headcommand {\beamer@sectionpages {4}{8}}
-\headcommand {\beamer@documentpages {8}}
-\headcommand {\gdef \inserttotalframenumber {8}}
+\headcommand {\beamer@subsectionentry {0}{3}{6}{9}{Plot}}
+\headcommand {\slideentry {3}{6}{1}{9/9}{Plot}{0}}
+\headcommand {\beamer@framepages {9}{9}}
+\headcommand {\beamer@partpages {1}{9}}
+\headcommand {\beamer@subsectionpages {9}{9}}
+\headcommand {\beamer@sectionpages {4}{9}}
+\headcommand {\beamer@documentpages {9}}
+\headcommand {\gdef \inserttotalframenumber {9}}

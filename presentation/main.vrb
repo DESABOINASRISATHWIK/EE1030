@@ -1,22 +1,13 @@
 \frametitle{Verification}
 Now, if we check the value of ,
     \begin{align}
-    \mathbf{p}(t)\top \myvec{ 1 & 0 \\ 0 & 1 } \mathbf{p}(t)
+    \mathbf{p}(t)^\top \myvec{ 1 & 0 \\ 0 & 1 } \mathbf{p}(t)
     \end{align}
 	We get,\\
   \begin{align}
-    \mathbf{p}(t)\top \myvec{ 1 & 0 \\ 0 & 1 } \mathbf{p}(t)=a^2
+    \mathbf{p}(t)^\top \myvec{ 1 & 0 \\ 0 & 1 } \mathbf{p}(t)=a^2
     \end{align}
 
 	$\implies$ We proved that the given points lie on a circle $x^2 + y^2 = a^2$.\\
 	Since we have the values of $t$ in $(-1,1)$, the y-coordinate of the points is always positive.\\
 	We get a semi-circle with those points.
-
-The codes for verification:
- {\footnotesize
-\begin{lstlisting}
-https://github.com/DESABOINASRISATHWIK/EE1030/blob/main/presentation/codes/plot.py
-https://github.com/DESABOINASRISATHWIK/EE1030/blob/main/presentation/codes/code.c
-\end{lstlisting}}
-
-
