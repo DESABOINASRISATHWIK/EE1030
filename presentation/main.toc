@@ -4,5 +4,7 @@
 \beamer@subsectionintoc {3}{2}{Parametric form}{5}{0}{2}
 \beamer@subsectionintoc {3}{3}{Matrix equation}{6}{0}{2}
 \beamer@subsectionintoc {3}{4}{Verification}{7}{0}{2}
-\beamer@subsectionintoc {3}{5}{Codes}{8}{0}{2}
-\beamer@subsectionintoc {3}{6}{Plot}{9}{0}{2}
+\beamer@sectionintoc {4}{Codes}{8}{0}{3}
+\beamer@subsectionintoc {4}{1}{C code to generate points}{8}{0}{3}
+\beamer@subsectionintoc {4}{2}{Plotting the figure using Python}{11}{0}{3}
+\beamer@subsectionintoc {4}{3}{Plot}{14}{0}{3}
