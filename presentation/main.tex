@@ -108,79 +108,49 @@ Given $x$ and $y$ in the parametric form,\\
 
 
 \end{frame}
-\subsection{Verification}
+\subsection{Matrix equation}
 \begin{frame}
-\frametitle{Verification}
-	The transformation matrix $\vec{A(t)}$ with parameter $t$ is,\\
+\frametitle{Matrix equation}
+	The transformation matrix $\vec{A(t)}$ and $\vec{v(t)}$ with parameter $t$ are,\\
 	\begin{align}
-		\mathbf{A}(t) & = \myvec{ \frac{2a}{1+t^2} & 0 \\ 0 & \frac{a(1-t^2)}{1+t^2}},\\ \text{Then, we get} \vec{p(t)},\\ \mathbf{p}(t) & = \myvec{ \frac{2a}{1+t^2} & 0 \\ 0 & \frac{a(1 - t^2)}{1+t^2} } \myvec{t \\ 1},\\ \text{That implies, we get}\\ \mathbf{p}(t)^T \myvec{ 1 & 0 \\ 0 & 1} \mathbf{p}(t) = a^2\\ \text{Therefore, we can say that}\\
-	x^2 + y^2 = a^2.
+		\implies \mathbf{A}(t) & = \myvec{ \frac{2a}{1+t^2} & 0 \\ 0 & \frac{a(1-t^2)}{1+t^2}},\\ \implies \mathbf{v(t)} &= \myvec{t \\ 1},\\ \mathbf{p(t)} &= \mathbf{A(t)} \mathbf{v(t)}, \\\implies  \mathbf{p}(t) & = \myvec{ \frac{2a}{1+t^2} & 0 \\ 0 & \frac{a(1 - t^2)}{1+t^2} } \myvec{t \\ 1},\\ 
 	\end{align}
 \end{frame}
 %\section{Plot}
-\subsection{Balanced Equation}
+\subsection{Verification}
 \begin{frame}[fragile]
-\frametitle{Balanced Equation}
+\frametitle{Verification}
+Now, if we check the value of ,
+    \begin{align}
+    \mathbf{p}(t)\top \myvec{ 1 & 0 \\ 0 & 1 } \mathbf{p}(t)
+    \end{align}
+	We get,\\
+  \begin{align}
+    \mathbf{p}(t)\top \myvec{ 1 & 0 \\ 0 & 1 } \mathbf{p}(t)=a^2
+    \end{align}
 
-Thus, 
-\begin{align}
-\label{eq:chem_balance_mat_sol}
-x_1 &= \frac{3}{4}x_4, x_2 = x_4, x_3 = \frac{1}{4}x_4
-\\
-\implies \vec{x} &= x_4\myvec{\frac{3}{4} \\ 1 \\ \frac{1}{4} \\ 1}= \myvec{3 \\ 4 \\ 1 \\ 4}
-\end{align}
-%
-upon substituting $x_4 = 4$.
-%
-\eqref{eq:chem_balance_unsol} then becomes
-%
-\begin{align}
-\label{eq:chem_balance_final}
-3Fe+4H_2 O &\rightarrow Fe_3 O_4 + 4H_2
-\end{align}
-The codes in 
-{\footnotesize
+	$\implies$ We proved that the given points lie on a circle $x^2 + y^2 = a^2$.\\
+	Since we have the values of $t$ in $(-1,1)$, the y-coordinate of the points is always positive.\\
+	We get a semi-circle with those points.
+
+The codes for verification:
+ {\footnotesize
 \begin{lstlisting}
 https://github.com/DESABOINASRISATHWIK/EE1030/blob/main/presentation/codes/plot.py
 https://github.com/DESABOINASRISATHWIK/EE1030/blob/main/presentation/codes/code.c
-\end{lstlisting}
-}
-verifies \eqref{eq:chem_balance_mat_sol}.
-%plots Fig. \ref{fig:circle_diameter}.
-%
-%\begin{figure}
-%\centering
-%\includegraphics[width=0.6\columnwidth]{./figs/circle_diameter.eps}
-%\caption{Circle $C$ and all lines (i)-(iv). (ii) is a diameter.}
-%\label{fig:circle_diameter}
-%\end{figure}
-\end{frame}
-%\begin{frame}
-%\frametitle{Introduction}
-%\framesubtitle{Literature}
-%%\begin{figure}[t!]
-%%    \centering
-%%    \begin{subfigure}[t]{0.4\columnwidth}
-%%        \centering
-%%        \includegraphics[width=\columnwidth]{point_source}
-%%        \caption{Single point source}
-%%\label{fig3:subfig1}        
-%%    \end{subfigure}%
-%%    ~ 
-%%    \begin{subfigure}[t]{0.4\columnwidth}
-%%        \centering
-%%        \includegraphics[width=\columnwidth]{pointNoPowerDist_new}
-%%        \caption{SNR profile}
-%%\label{fig3:subfig2}
-%%    \end{subfigure}
-%%  %  \caption{Average SNR for a BPP. $N=16$}
-%%    \label{fig3}
-%%  \end{figure}
-%
-%\end{frame}
-%  
-%
-%
-%%
+\end{lstlisting}}
 
+
+\end{frame}
+\subsection{Plot}
+\begin{frame}
+	\frametitle{Plot}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figs/plot.png} 
+    \caption{Circle Points}
+    \label{fig:circle_plot}
+\end{figure}
+
+\end{frame}
 \end{document}
