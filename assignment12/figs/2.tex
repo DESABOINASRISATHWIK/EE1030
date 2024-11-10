@@ -1,0 +1,30 @@
+\begin{figure}[!ht]
+\centering
+
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\small]
+
+\draw (5,17.25) to[short] (5,15.25);
+\draw (5,16.25) to[european resistor] (15.25,16.25);
+\draw (15.25,17.25) to[short] (15.25,15.25);
+\draw (5,15.75) to[short] (5.75,15.75);
+\draw (15.25,15.75) to[short] (14.5,15.75);
+\draw (5.75,15.75) to[european resistor] (9.5,12);
+\draw (14.5,15.75) to[european resistor] (10.75,12);
+\draw (9.5,12) to[short] (9.5,11.25);
+\draw (10.75,12) to[short] (10.75,11.25);
+\draw [ line width=0.8pt](8.75,11.25) to[short] (11.25,11.25);
+\draw [line width=0.8pt, ->, >=Stealth] (3.5,16) -- (5,16);
+\draw [line width=0.8pt, ->, >=Stealth] (17,16) -- (15.25,16);
+\draw [line width=0.8pt, ->, >=Stealth] (10,11.25) -- (10,9.75);
+\node [font=\normalsize] at (16.5,16.25) {$P_2$};
+\node [font=\normalsize] at (3.75,16.25) {$P_1$};
+\node [font=\normalsize] at (5.75,16.5) {bus $1$};
+\node [font=\normalsize] at (14.5,16.5) {bus $2$};
+\node [font=\normalsize] at (11.5,12) {bus $3$};
+\node [font=\small] at (10,15.75) {$j\alpha x\, \ohm$};
+\node [font=\small] at (6.5,13.75) {$j\beta x\, \ohm$};
+\node [font=\small] at (13.5,13.5) {$j\gamma x\, \ohm$};
+\end{circuitikz}
+
+\end{figure}

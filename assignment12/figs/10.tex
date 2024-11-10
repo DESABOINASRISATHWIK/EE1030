@@ -1,0 +1,41 @@
+\begin{figure}[!ht]
+\centering
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw (6.75,15) to[sinusoidal voltage source, sources/symbol/rotate=auto] (6.75,11.75);
+\draw (6.75,11.75) to[short, -o] (9.25,11.75) ;
+\draw (9.25,11.75) to[short] (15.25,11.75);
+\draw (6.75,15) to[short] (7.25,15);
+\draw  (7.25,15.25) rectangle (8.5,14.75);
+\draw (8.5,15) to[short, -o] (9.25,15) ;
+\draw (9.25,15) to[R] (11.5,15);
+\draw (11.5,15) to[R] (11.5,11.75);
+\draw (11.5,15) to[R] (15.25,15);
+\draw (15.25,15) to[L ] (15.25,11.75);
+\draw (16,11.75) to[L ] (16,15);
+\draw (16,15) to[short] (17,15);
+\draw (16,11.75) to[short] (17,11.75);
+\draw (17,15) to[curved capacitor] (17,11.75);
+\node at (15,14.75) [circ] {};
+\node at (16.25,14.75) [circ] {};
+\node [font=\normalsize] at (7.75,15) {$Z_s$};
+\node [font=\normalsize] at (7.75,13.25) {source};
+\draw [ line width=0.8pt](8.75,12.75) to[short] (8.75,13.5);
+\draw [line width=0.8pt, ->, >=Stealth] (8.75,13.5) -- (9.5,13.5);
+\node [font=\normalsize] at (9.5,13.75) {$Z_th$};
+\draw [line width=0.8pt, short] (15.25,11.5) .. controls (14.75,10.75) and (14.75,11) .. (15.25,10.5);
+\draw [line width=0.8pt, short] (16,11.5) .. controls (16.5,11) and (16.25,11) .. (15.75,10.5);
+\draw [line width=0.8pt, ->, >=Stealth] (15.25,11.5) -- (15.5,11.75);
+\draw [line width=0.8pt, ->, >=Stealth] (16,11.5) -- (15.75,11.75);
+\node [font=\normalsize] at (15.5,10) {$5\, mH$};
+\node [font=\normalsize] at (14,13.25) {$125\, mH$};
+\node [font=\small] at (16.5,12.75) {$1\, mH$};
+\node [font=\normalsize] at (17.75,13.75) {$50\, \mu F$};
+\node [font=\normalsize] at (9.25,15.25) {P};
+\node [font=\normalsize] at (9.25,11.5) {Q};
+\node [font=\normalsize] at (10.25,15.5) {$4\, \ohm$};
+\node [font=\normalsize] at (12.5,14) {$4\, \ohm$};
+\node [font=\normalsize] at (13.5,15.5) {$2\, \ohm$};
+\end{circuitikz}
+
+\end{figure}

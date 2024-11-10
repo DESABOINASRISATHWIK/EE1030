@@ -1,0 +1,43 @@
+\begin{figure}[!ht]
+\centering
+
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\small]
+\draw [line width=0.8pt](12.75,13.25) to[L ] (16.25,13.25);
+\draw [line width=0.8pt](12.75,12.5) to[L ] (16.25,12.5);
+\draw [ line width=0.8pt](16.25,13.25) to[short] (16.25,12.5);
+\draw [ line width=0.8pt](14.5,15) to[european resistor] (16.25,13.25);
+\draw [ line width=0.8pt](14.5,15) to[european resistor] (12.75,13.25);
+\draw [ line width=0.8pt](14.5,15) to[short] (14.5,15.75);
+\draw [ line width=0.8pt](14.5,15.75) to[short] (12.5,15.75);
+\draw [line width=0.8pt](10.5,15.75) to[L ] (12.5,15.75);
+\draw [line width=0.8pt](10.5,15) to[L ] (12.5,15);
+\draw [ line width=0.8pt](10.5,15) to[short] (10.5,15.75);
+\draw [ line width=0.8pt](10.5,15.75) to[short, -o] (8.75,15.75) ;
+\draw [ line width=0.8pt](12.75,13.25) to[short, -o] (8.75,13.25) ;
+\draw [ line width=0.8pt](12.75,12.5) to[short, -o] (8.75,12.5) ;
+\draw [ line width=0.8pt](12.5,15) to[short] (12.5,13.25);
+\draw [ line width=0.8pt , dashed] (11.5,15.5) circle (1.25cm);
+\draw [ line width=0.8pt , dashed] (14.5,13) circle (1.25cm);
+\node [font=\normalsize] at (8.25,15.75) {R};
+\node [font=\normalsize] at (8.25,13.25) {B};
+\node [font=\normalsize] at (8.25,12.5) {Y};
+\node [font=\normalsize, rotate around={45:(0,0)}] at (13.5,14) {$Z_1$};
+\node [font=\normalsize, rotate around={-45:(0,0)}] at (15.25,14.25) {$Z_2$};
+\node [font=\small] at (14,13.75) {$pc$};
+\node [font=\small] at (11.25,14.5) {$pc$};
+\node [font=\small] at (11,16.25) {$cc$};
+\node [font=\small] at (15.25,12.75) {$cc$};
+\node [font=\small] at (10.75,15.5) {$+$};
+	\node [font=\small] at (10.75,15.25) {$+$};
+\node [font=\small] at (12,15.5) {$-$};
+\node [font=\small] at (12.25,15.25) {$-$};
+\node [font=\small] at (14,13) {$+$};
+\node [font=\small] at (15,12.25) {$+$};
+\node [font=\small] at (14,12.25) {$-$};
+\node [font=\small] at (15,13) {$-$};
+\node [font=\small] at (13,16.5) {$W_1$};
+\node [font=\small] at (15.75,12) {$W_2$};
+\end{circuitikz}
+
+\end{figure}

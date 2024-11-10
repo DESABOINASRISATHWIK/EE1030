@@ -1,0 +1,33 @@
+\begin{figure}[!ht]
+\centering
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw [ line width=0.8pt](7,16.75) to[R] (7,13.5);
+\draw [ line width=0.8pt](7,13.5) to[R] (7,9.25);
+\draw [ line width=0.8pt](7,16.75) to[short] (10.5,16.75);
+\draw [ line width=0.8pt](7,9.25) to[short] (10.5,9.25);
+\draw [ line width=0.8pt](10.5,9.25) to[R] (10.5,12.75);
+\draw [ line width=0.8pt](10.5,13.25) to[R] (10.5,16.75);
+\draw [ line width=0.8pt](7,13) to[short] (9.75,13);
+\draw [ line width=0.8pt](9.75,13.5) to[short] (9.75,12.5);
+\draw [ line width=0.8pt](9.75,13) to[short] (7,13);
+\draw [ line width=0.8pt](9.75,13.25) to[short] (10.5,13.25);
+\draw [ line width=0.8pt](9.75,12.75) to[short] (10.5,12.75);
+\draw [line width=0.8pt, ->, >=Stealth] (10.5,14.25) -- (10.5,13.75);
+\draw [line width=0.8pt, ->, >=Stealth] (10,12.75) -- (10.25,12.75);
+\draw [line width=0.8pt, ->, >=Stealth] (10.5,16.75) -- (10.5,17.5);
+\draw [line width=0.8pt](10.5,9.25) to (10.5,9) node[ground]{};
+\node [font=\normalsize] at (5.25,15.25) {$R_1 = 100\, k\ohm$};
+\node [font=\normalsize] at (5.25,11.25) {$R_2 = 50\, k\ohm$};
+\node [font=\normalsize] at (12,15) {$R_C = 2\, k\ohm$};
+\node [font=\normalsize] at (12,11) {$R_E = 1\, k\ohm$};
+\node [font=\small] at (10.75,13.25) {$+$};
+\node [font=\small] at (10.75,12.75) {$-$};
+\node [font=\normalsize] at (11.5,13) {$V_{CE}$};
+\node [font=\normalsize] at (10.75,18) {$V_{CC} = +12V$};
+\node [font=\normalsize] at (10,14) {$I_C$};
+\node [font=\normalsize] at (13.5,16.25) {$Text$};
+\end{circuitikz}
+
+\label{fig:my_label}
+\end{figure}
