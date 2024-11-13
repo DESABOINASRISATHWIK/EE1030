@@ -1,0 +1,252 @@
+\documentclass{article}
+
+
+% if you need to pass options to natbib, use, e.g.:
+%     \PassOptionsToPackage{numbers, compress}{natbib}
+% before loading neurips_2024
+
+
+
+
+
+% to compile a preprint version, e.g., for submission to arXiv, add add the
+% [preprint] option:
+\usepackage[preprint]{neurips_2024}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{float} 
+% to compile a camera-ready version, add the [final] option, e.g.:
+%     \usepackage[final]{neurips_2024}
+
+
+% to avoid loading the natbib package, add option nonatbib:
+%    \usepackage[nonatbib]{neurips_2024}
+
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{xcolor}         % colors
+
+
+\title{Software Assignment: Report}
+
+
+% The \author macro works with any number of authors. There are two commands
+% used to separate the names and addresses of multiple authors: \And and \AND.
+%
+% Using \And between authors leaves it to LaTeX to determine where to break the
+% lines. Using \AND forces a line break at that point. So, if LaTeX puts 3 of 4
+% authors names on the first line, and the last on the second line, try using
+% \AND instead of \And before the third author name.
+
+
+\author{
+  DESABOINA SRI SATHWIK-AI24BTECH11007\\%\thanks{Use footnote for providing further information about author (webpage, alternative address)---\emph{not} for acknowledging funding agencies.} \\
+  %Department of Computer Science\\
+  %Cranberry-Lemon University\\
+  %Pittsburgh, PA 15213 \\
+  \texttt{ai24btech11007@iith.ac.in} \\
+  % examples of more authors
+  % \And
+  % Coauthor \\
+  % Affiliation \\
+  % Address \\
+  % \texttt{email} \\
+  % \AND
+  % Coauthor \\
+  % Affiliation \\
+  % Address \\
+  % \texttt{email} \\
+  % \And
+  % Coauthor \\
+  % Affiliation \\
+  % Address \\
+  % \texttt{email} \\
+  % \And
+  % Coauthor \\
+  % Affiliation \\
+  % Address \\
+  % \texttt{email} \\
+}
+\date{\today}
+
+\begin{document}
+
+
+\maketitle
+
+\begin{center}
+\textbf{Used algorithm: Shifted QR algorithm}
+\end{center}
+
+\section{Introduction}
+The algorithm which I used to calculate the eigen values of the matrices of any type is \textbf{Shifted QR algorithm}. This report presents a detailed analysis of the shifted QR algorithm for eigenvalue computation, including its implementation, complexity analysis, and comparison with other prominent methods. We examine the algorithm's convergence properties, memory requirements, and suitability for different types of matrices. The analysis includes comparisons with power method, inverse iteration, and other variants of the QR algorithm in terms of computational efficiency and numerical stability. Here, I also used two shift strategies which Wilkinson shift and Rayleigh shift.\\
+
+Eigenvalue computation is a fundamental problem in numerical linear algebra with applications ranging from principal component analysis to quantum mechanics. The shifted QR algorithm represents a powerful method for computing all eigenvalues of a matrix simultaneously.
+
+\section{Algorithm Analysis}
+
+\subsection{Implementation Overview}
+The implemented shifted QR algorithm uses the following key components:
+
+\begin{algorithm}[H]
+\caption{Shifted QR Algorithm}
+	\begin{algorithmic}[1]
+\State Initialize matrix A
+\While{not converged}
+    \State Compute shift $\mu$
+    \State A ← A - $\mu$I
+    \State Compute QR decomposition of A
+    \State A ← RQ + $\mu$I
+\EndWhile
+\end{algorithmic}
+\end{algorithm}
+
+\subsection{Time Complexity Analysis}
+The computational complexity can be broken down as follows:
+
+\begin{itemize}
+    \item QR decomposition using Givens rotations: O($n^3$) per iteration
+    \item Shift computation: O(1)
+    \item Matrix multiplication (RQ): O($n^3$) per iteration
+\end{itemize}
+
+Total complexity: O($kn^3$) where k is the number of iterations needed for convergence.
+
+\subsection{Memory Usage}
+Memory requirements:
+\begin{itemize}
+    \item Original matrix: $n^2$ doubles
+    \item Working matrix: $n^2$ doubles
+    \item Eigenvalue storage: n doubles
+    \item Additional temporary storage: O(1)
+\end{itemize}
+
+Total memory complexity: O($n^2$)
+
+\subsection{Convergence Analysis}
+The convergence rate depends on the eigenvalue separation:
+\[ \text{Rate} \approx \left|\frac{\lambda_{i+1}}{\lambda_i}\right| \]
+where $\lambda_i$ are the eigenvalues ordered by magnitude.
+
+For the Wilkinson shift strategy:
+\begin{itemize}
+    \item Cubic convergence for well-separated eigenvalues
+    \item Linear convergence for clustered eigenvalues
+    \item Typically requires 10-30 iterations per eigenvalue
+\end{itemize}
+
+\section{Comparison with Other Methods}
+
+\begin{table}[H]
+\centering
+\caption{Comparison of Eigenvalue Methods}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Method & Time Complexity & Memory & Convergence Rate \\
+\midrule
+Power Method & O($kn^2$) & O(n) & Linear \\
+	Inverse Iteration & O($kn^3$) & O($n^2$) & Linear/Quadratic \\
+QR without shifts & O($kn^3$) & O($n^2$) & Linear \\
+Shifted QR & O($kn^3$) & O($n^2$) & Cubic \\
+Divide \& Conquer & O($n^3$) & O($n^2$) & - \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Suitability Analysis}
+
+\subsubsection{Dense Symmetric Matrices}
+\begin{itemize}
+    \item Shifted QR: Excellent (maintains symmetry)
+    \item Power Method: Poor (finds only dominant eigenvalue)
+    \item Divide \& Conquer: Excellent (exploits structure)
+\end{itemize}
+
+\subsubsection{Sparse Matrices}
+\begin{itemize}
+    \item Shifted QR: Poor (fills in zeros)
+    \item Power Method: Excellent (preserves sparsity)
+    \item Arnoldi/Lanczos: Excellent (exploits sparsity)
+\end{itemize}
+
+\subsubsection{Non-symmetric Matrices}
+\begin{itemize}
+    \item Shifted QR: Good (handles complex eigenvalues)
+    \item Power Method: Limited (real dominant eigenvalue only)
+    \item Arnoldi: Good (handles non-symmetry well)
+\end{itemize}
+
+\section{Performance Analysis}
+
+\subsection{Accuracy Considerations}
+The implemented algorithm achieves high accuracy due to:
+\begin{itemize}
+    \item Use of Givens rotations (numerically stable)
+    \item Wilkinson shift strategy (improved convergence)
+    \item Deflation technique (reduces accumulation of errors)
+\end{itemize}
+
+Error bound for computed eigenvalues $\lambda$:
+\[ |\lambda - \lambda| \leq O(\epsilon\|A\|) \]
+where $\epsilon$ is machine precision and\[ \|A\| \]is the matrix norm.
+
+\subsection{Special Cases}
+
+\subsubsection{Ill-conditioned Matrices}
+For matrices with condition number $K$:
+\[ \text{Relative Error} \leq O(k\epsilon) \]
+
+\subsubsection{Matrices with Multiple Eigenvalues}
+\begin{itemize}
+    \item Convergence slows for repeated eigenvalues
+    \item Accuracy may decrease due to sensitivity
+    \item Special handling needed for clustered eigenvalues
+\end{itemize}
+
+\section{Implementation Optimizations}
+
+\subsection{Current Optimizations}
+\begin{itemize}
+    \item Deflation to reduce problem size
+    \item Adaptive shift strategy
+    \item Early termination for converged eigenvalues
+    \item Minimal memory allocation/deallocation
+\end{itemize}
+
+\subsection{Potential Improvements}
+\begin{itemize}
+    \item Block operations for cache efficiency
+    \item Parallel implementation of rotations
+    \item Adaptive convergence criteria
+    \item Specialized handling for sparse matrices
+\end{itemize}
+
+\section{Conclusion}
+The implemented shifted QR algorithm provides a robust and efficient method for computing eigenvalues. Its O($n^3$) complexity is competitive with other methods, while offering better convergence properties for general matrices. The method is particularly suitable for dense matrices where all eigenvalues are needed.
+
+Key advantages:
+\begin{itemize}
+    \item Simultaneous computation of all eigenvalues
+    \item Cubic convergence with good shift strategy
+    \item Numerically stable implementation
+\end{itemize}
+
+Primary limitations:
+\begin{itemize}
+    \item High memory requirements
+    \item Not optimal for sparse matrices
+    \item Performance degradation for clustered eigenvalues
+\end{itemize}
+
+\end{document}
